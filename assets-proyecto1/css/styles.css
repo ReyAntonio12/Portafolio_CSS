@@ -1,0 +1,56 @@
+/*Variables*/
+:root {
+    --color-blanco: #fff;
+    --color-celeste: #04B4E0;
+    --color-fondo: #F2F7F9;
+    --color-transparente: transparent;
+    --color-negro: #222222;
+    --color-icono: #B5B6B7;
+    --color-subtitulo: #8C8C8C;
+    --color-texto: #555555;
+}
+
+/* ESTILOS GENEREALES */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-fondo);
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-texto);;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-negro)
+}
+
+/* Imagen de Fondo */
+
+body {
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -30px -120px;
+}
+
+/* ESTRUCTURA PRINCIPAL */
+
+.contenido {
+    position: relative;
+    min-width: 1290px;
+    min-height: 80vh;
+    width: 75%;
+    height: 80vh;
+    margin: 10vh auto;
+    display: grid;
+    grid-template-areas: "aside content";
+    grid-template-columns: 30% 70%;
+    /*Sombra*/
+    border-radius: 4rem;
+    box-shadow: 0 0 100px -5px rgba(0, 0, 0, 0.26);
+}
