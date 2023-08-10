@@ -9,6 +9,8 @@
     --color-subtitulo: #8C8C8C;
     --color-texto: #555555;
     --color-sidebar: #EAF1FB;
+    --color-borde-testimonio: #E5E6E7;
+    --color-compania: #A5A6A7;
 }
 
 /* ESTILOS GENEREALES */
@@ -244,7 +246,8 @@ body {
     transition: all 300ms ease-in-out;
 }
 
-.menu__opcion:hover .menu__link{
+
+.menu__opcion:hover .menu__link, .menu__link--active{
     color: var(--color-celeste)
 }
 
@@ -266,4 +269,377 @@ body {
 .menu__opcion:hover .menu__overlay {
     opacity: 1;
     right: 100%;
+}
+
+
+/*SECCION SOBRE MI */
+
+/*TODOS LOS ESTILOS QUE SE CREAN DEBAJO DE ESTA LINEA SON ESPECIFICOS PARA SOBRE-MI.HTML*/
+
+.contenido__sobremi {
+    height: 100%;
+    min-height: 100%;
+    padding: 5rem;
+    padding-right: 2.5rem;
+    display: block;
+    overflow: auto;
+}
+
+/**Titulo */
+
+.sobremi__header {
+    margin-bottom: 4rem;
+    display: inline-block;
+}
+
+.header__titulo {
+    font-size: 3rem;
+    position: relative;
+}
+
+.header__titulo::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: -25px;
+    width: 50px;
+    height: 30px;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-celeste), var(--color-celeste) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    opacity: 0.5;
+}
+
+.titulo__color {
+    color: var(--color-celeste);
+}
+
+/*Informacion Personal*/
+.sobremi__informacion-personal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.informacion-personal__bio {
+    flex-basis: 58%;
+}
+
+.informacion-personal__data {
+    flex-basis: 42%;
+    padding: 0 1.5rem;
+}
+
+.informacion-personal__descripcion {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+.informacion-personal__opcion {
+    margin-bottom: 1rem;
+}
+
+.informacion-personal__first {
+    margin-right: 0.5rem;
+    color: var(--color-celeste);
+    font-weight: 600;
+}
+
+/*ESTILOS COMPARTIDOS*/
+
+.sobremi__servicios, .sobremi__testimonios, .sobremi__clientes, .sobremi__precios, .sobremi__extras{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.servicios__header, .testimonios__header, .clientes__header, .precios__header, .extras__header {
+    display: inline-block;
+    padding-right: 1.2rem;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.servicios__titulo, .testimonios__title, .clientes__titulo, .precios__titulo, .extras__titulo {
+    font-size: 2.1rem;
+}
+
+.servicios__titulo::after,
+.testimonios__title::after,
+.clientes__titulo::after,
+.precios__titulo::after,
+.extras__titulo::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    width: 30px;
+    height: 20px;
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-celeste), var(--color-celeste) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    opacity: 0.5;
+}
+
+/*SERVICIOS*/
+
+.icono__servicio{
+    color: var(--color-celeste);
+    font-size: 3.8rem;
+}
+
+.servicios__contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.servicios__servicio{
+    flex-basis: calc(50% - 3rem);
+    margin-right: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.servicios__titulo {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+
+}
+
+.servicion__descripcion {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/*Testimonios*/
+
+.testimonios__contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.testimonios__testimonio {
+    flex-basis: calc(50% - 2.5rem);
+    border: 0.2rem solid var(--color-borde-testimonio);
+    border-radius: 2rem;
+    padding: 0 2.5rem 1.5rem 2.5rem;
+    margin-right: 2.5rem;
+    margin-top: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.testimonio__img-contenedor {
+    width: 100%;
+}
+
+.testimonio__fullIMG {
+    max-width: 9rem;
+    max-height: 9rem;
+    border-radius: 9rem;
+    margin: 0 auto;
+    margin-top: -4.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 10px -8px rgba(0 0 0 0.22);
+}
+
+.testimonio__descripcion {
+    margin-bottom: 1rem;
+}
+
+.testimonio__texto {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+
+.testimonio__autor {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.autor__nombre {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.autor__empresa {
+    color: var(--color-compania);
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+.autor__icono-item {
+    font-size: 4rem;
+    opacity: 0.5;
+    color: var(--color-celeste);
+}
+
+/*CLIENTES*/
+
+.sobremi__clientes {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.clientes__header{
+    margin-bottom: 3rem;
+}
+
+.clientes__contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cliente__link {
+    display: block;
+    width: 100%;
+    opacity: 0.7;
+    transition: all 300ms ease-in-out;
+}
+
+.cliente__link:hover {
+    opacity: 1;
+}
+
+.client__img {
+    width: 145px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/*PRECIOS*/
+
+.precios__contenedor{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+}
+
+.precios__caja {
+    flex-basis: 50%;
+    height: 100%;
+    border: 2px solid var(--color-borde-testimonio);
+    border-radius: 1.5rem;
+    padding: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+.precios__caja:last-child {
+    margin-right: 0rem;
+}
+
+.precios__caja:hover{
+    box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1rem);
+}
+
+.precios__subtitulo{
+    margin-bottom: 3rem;
+}
+
+.precio__texto {
+    position: relative;
+    display: inline-block;
+}
+
+.precios__caja:hover .precio__texto::after {
+    content: "";
+    height: 2px;
+    background-color: var(--color-celeste);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+}
+
+.precios__precio {
+    padding-bottom: 1rem;
+}
+
+.preio__numero {
+    font-size: 4.2rem;
+    line-height: 1;
+    color: var(--color-negro);
+    display: block;
+}
+
+.precio__aviso {
+    color: var(--color-texto);
+    display: block;
+}
+
+.precios__compra {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+.precio__btn {
+    display: inline-block;
+    padding: 1.2rem 3.1rem;
+    border: 2px solid var(--color-borde-testimonio);
+    box-shadow: 0 10px 10px -8px var(--color-borde-testimonio);
+    border-radius: 3rem;
+    transition: all 300ms ease-in-out;
+}
+
+.precio__btn:hover {
+    background-color: var(--color-celeste);
+    color: var(--color-blanco);
+    border: 2px solid var(--color-celeste);
+}
+
+.precio_descripcion {
+    font-size: 1.4rem;
+    padding: 0.6rem 0;
+}
+
+/*Informacion extra*/
+
+.extras__contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.extras__info {
+    flex-basis: 30%;
+    border: 2px solid var(--color-borde-testimonio);
+    border-radius: 1rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+}
+
+.extras__info:hover {
+    box-shadow: 0 18px 24px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(0.5rem);
+}
+
+.extra__icono {
+    font-size: 3.3rem;
+    color: var(--color-celeste);
+    margin-bottom: 1rem;
+}
+
+.extras__titulo {
+    font-size: 1.5rem;
+    margin:1.5rem;
+}
+
+.extras__cantidad {
+    display: block;
+    font-size: 3.6rem;
+    line-height: 5rem;
+    margin: 1.5rem 1rem;
+    margin-bottom: 0;
+    color: var(--color-subtitulo);
 }
